@@ -45,6 +45,10 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
+    ['@nuxtjs/google-adsense', {
+      id: 'ca-pub-9365736857722008',
+      pageLevelAds: true
+    }]
   ],
   /*
   ** Axios module configuration
