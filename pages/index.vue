@@ -1,25 +1,25 @@
 <template>
   <section class="container">
     <div>
-      <logo />
       <h1 class="title">
         currency.ovh
       </h1>
-      <h2 class="subtitle">
-        currency.ovh
-      </h2>
       <div class="links">
+        <a href="https://pools.currency.ovh/" 
+          target="_blank"
+          class="button--green">Pools List</a>
         <a
-          href="https://nuxtjs.org/"
+          href="https://blockbook.ovh/"
           target="_blank"
           class="button--green"
-        >Documentation</a>
+        >BlockBook</a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://twitter.com/uesitananame55"
           target="_blank"
           class="button--grey"
-        >GitHub</a>
+        >About</a>
       </div>
+      <div>© currency.ovh</div>
     </div>
   </section>
 </template>
