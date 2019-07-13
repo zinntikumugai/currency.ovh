@@ -1,23 +1,16 @@
 <template>
   <section class="container">
     <div>
-      <h1 class="title">
-        currency.ovh
-      </h1>
+      <h1 class="title">currency.ovh</h1>
       <div class="links">
-        <a href="https://pools.currency.ovh/" 
-          target="_blank"
-          class="button--green">Pools List</a>
+        <a href="https://pools.currency.ovh/" target="_blank" class="button--green">Pools List</a>
         <a
-          href="https://blockbook.ovh/"
+          href="https://explorers.currency.ovh/"
           target="_blank"
           class="button--green"
-        >BlockBook</a>
-        <a
-          href="https://twitter.com/uesitananame55"
-          target="_blank"
-          class="button--grey"
-        >About</a>
+        >Explorers List</a>
+        <a href="https://blockbook.ovh/" target="_blank" class="button--green">BlockBook</a>
+        <a href="https://twitter.com/uesitananame55" target="_blank" class="button--grey">About</a>
       </div>
       <div>© currency.ovh</div>
     </div>
@@ -25,13 +18,9 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
-  }
-}
+  components: {}
+};
 </script>
 
 <style>
@@ -45,8 +34,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
