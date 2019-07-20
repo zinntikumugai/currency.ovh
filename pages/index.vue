@@ -2,16 +2,17 @@
   <section class="container">
     <div>
       <h1 class="title">currency.ovh</h1>
-      <div class="links">
-        <a href="https://pools.currency.ovh/" target="_blank" class="button--green">Pools List</a>
-        <a
-          href="https://explorers.currency.ovh/"
-          target="_blank"
-          class="button--green"
-        >Explorers List</a>
-        <a href="https://blockbook.ovh/" target="_blank" class="button--green">BlockBook</a>
-        <a href="https://twitter.com/uesitananame55" target="_blank" class="button--grey">About</a>
+      <div class="links row">
+        <div class="col-4" v-for="(item, index) in services" :key="index">
+          <a :href="item.url" target="_blank" class="button--green row">
+            <img v-if="item.imgUrl" :src="item.imgUrl" class="col-12" />
+            <div class="w-100"></div>
+            <p class="col-12">{{item.name}}</p>
+          </a>
+        </div>
       </div>
+      <hr />
+      <a href="https://twitter.com/uesitananame55" target="_blank" class="button--grey">About</a>
       <div>© currency.ovh</div>
     </div>
   </section>
@@ -19,7 +20,33 @@
 
 <script>
 export default {
-  components: {}
+  components: {},
+  data() {
+    return {
+      services: [
+        {
+          name: "Pools List",
+          imgUrl: "/icons/list.svg",
+          url: "https://pools.currency.ovh/"
+        },
+        {
+          name: "Explorers List",
+          imgUrl: "/icons/list.svg",
+          url: "https://explorers.currency.ovh/"
+        },
+        {
+          name: "BlockBook",
+          imgUrl: "/icons/trzer.svg",
+          url: "https://blockbook.ovh/"
+        },
+        {
+          name: "人のプール",
+          imgUrl: "/icons/pick.svg",
+          url: "https://mining.zinntikumugai.xyz/"
+        }
+      ]
+    };
+  }
 };
 </script>
 
@@ -53,5 +80,20 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.button--green {
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #3b8070;
+  color: #3b8070;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 10px 5px 10px 5px;
+}
+
+.button--green:hover {
+  color: #fff;
+  background-color: #3b8070;
 }
 </style>
