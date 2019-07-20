@@ -1,7 +1,7 @@
 {
   "name": "currency.ovh",
   "version": "1.0.0",
-  "description": "currency.ovh",
+  "description": "マイニングPool一覧、ブロックチェーンエクスプローラー一覧、ブロックチェーンエクスプローラーなど、複数暗号通貨のサービスをご提供",
   "author": "zinntikumugai",
   "private": true,
   "scripts": {
