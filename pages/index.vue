@@ -6,7 +6,6 @@
         <div class="col-4" v-for="(item, index) in services" :key="index">
           <a :href="item.url" target="_blank" class="button--green row">
             <img v-if="item.imgUrl" :src="item.imgUrl" class="col-12" />
-            <div class="w-100"></div>
             <p class="col-12">{{item.name}}</p>
           </a>
         </div>
