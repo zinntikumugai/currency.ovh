@@ -48,7 +48,8 @@ module.exports = {
     ['@nuxtjs/google-adsense', {
       id: 'ca-pub-9365736857722008',
       pageLevelAds: true
-    }]
+    }],
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Axios module configuration
@@ -65,6 +66,15 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+    }
+  },
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: "https://currency.ovh",
+    gzip: true,
+    generate: true,
+    routes() {
+      return ["/"]
     }
   }
 }
