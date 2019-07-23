@@ -49,6 +49,7 @@ module.exports = {
       id: 'ca-pub-9365736857722008',
       pageLevelAds: true
     }],
+    'nuxt-fontawesome',
     '@nuxtjs/sitemap'
   ],
   /*
@@ -67,6 +68,18 @@ module.exports = {
     */
     extend(config, ctx) {
     }
+  },
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['fab']
+      },
+    ],
   },
   sitemap: {
     path: "/sitemap.xml",

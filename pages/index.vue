@@ -11,7 +11,9 @@
         </div>
       </div>
       <hr />
-      <a href="https://twitter.com/uesitananame55" target="_blank" class="button--grey">About</a>
+      <a href="https://twitter.com/uesitananame55" target="_blank" class="button--grey">
+        <font-awesome-icon :icon="['fab', 'twitter']" class="c-twitter" /> uesitananame55
+      </a>
       <div>© currency.ovh</div>
     </div>
   </section>
@@ -94,5 +96,9 @@ export default {
 .button--green:hover {
   color: #fff;
   background-color: #3b8070;
+}
+
+.c-twitter {
+  color: #00acee;
 }
 </style>
