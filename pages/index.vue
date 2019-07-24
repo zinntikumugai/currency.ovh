@@ -1,7 +1,10 @@
 <template>
   <section class="container">
     <div class="container-fluid">
-      <h1 class="title">currency.ovh</h1>
+      <div class="center-block">
+        <h1 class="title">currency.ovh</h1>
+        <p><!-- なんか一言 --></p>
+      </div>
       <div class="links row">
         <div class="col-6 col-lg-4" v-for="(item, index) in services" :key="index">
           <a :href="item.url" target="_blank" class="button--green row">
@@ -55,7 +58,6 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -64,9 +66,7 @@ export default {
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
   font-weight: 300;
-  font-size: 100px;
   color: #35495e;
   letter-spacing: 1px;
 }
