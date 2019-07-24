@@ -50,7 +50,8 @@ module.exports = {
       pageLevelAds: true
     }],
     'nuxt-fontawesome',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    ['@nuxtjs/google-tag-manager', { id: 'GTM-PNQZHVS' }]
   ],
   /*
   ** Axios module configuration
