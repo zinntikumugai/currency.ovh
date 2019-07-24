@@ -1,9 +1,9 @@
 <template>
   <section class="container">
-    <div>
+    <div class="container-fluid">
       <h1 class="title">currency.ovh</h1>
       <div class="links row">
-        <div class="col-4" v-for="(item, index) in services" :key="index">
+        <div class="col-6 col-lg-4" v-for="(item, index) in services" :key="index">
           <a :href="item.url" target="_blank" class="button--green row">
             <img v-if="item.imgUrl" :src="item.imgUrl" class="col-12" />
             <p class="col-12">{{item.name}}</p>
