@@ -8,7 +8,7 @@
       <div class="links row">
         <div class="col-6 col-lg-4" v-for="(item, index) in services" :key="index">
           <a :href="item.url" target="_blank" class="button--green row">
-            <img v-if="item.imgUrl" :src="item.imgUrl" class="col-12" />
+            <img v-if="item.imgUrl" :src="item.imgUrl" class="col-12 resizeimage" />
             <p class="col-12">{{item.name}}</p>
           </a>
         </div>
@@ -100,5 +100,10 @@ export default {
 
 .c-twitter {
   color: #00acee;
+}
+
+.resizeimage {
+  width: 100%;
+  height: 100%;
 }
 </style>
