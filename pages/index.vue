@@ -2,20 +2,24 @@
   <section class="container">
     <div class="container-fluid">
       <div class="center-block">
-        <h1 class="title">currency.ovh</h1>
-        <p><!-- なんか一言 --></p>
+        <h1 class="title">Services</h1>
+        <p>一つの通貨に縛られないサービスっぽい何かをしてるよ！</p>
       </div>
       <div class="links row">
-        <div class="col-6 col-lg-4" v-for="(item, index) in services" :key="index">
-          <a :href="item.url" target="_blank" class="button--green row">
-            <img v-if="item.imgUrl" :src="item.imgUrl" class="col-12 resizeimage" />
-            <p class="col-12">{{item.name}}</p>
+        <div class="col-6 col-md-4 col-lg-4" v-for="(item, index) in services" :key="index">
+          <a :href="item.url" target="_blank" class="button--green row text-decoration-none">
+            <img :src="item.imgUrl" class="col-12 resizeimage img-fluid" />
+            <p class="col-12 text-justify text-center">{{item.name}}</p>
           </a>
         </div>
       </div>
       <hr />
-      <a href="https://twitter.com/uesitananame55" target="_blank" class="button--grey">
-        <font-awesome-icon :icon="['fab', 'twitter']" class="c-twitter" /> uesitananame55
+      <a
+        href="https://twitter.com/uesitananame55"
+        target="_blank"
+        class="button--grey text-decoration-none"
+      >
+        <font-awesome-icon :icon="['fab', 'twitter']" class="c-twitter" />uesitananame55
       </a>
       <div>© currency.ovh</div>
     </div>

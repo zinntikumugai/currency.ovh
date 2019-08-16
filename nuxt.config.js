@@ -86,9 +86,6 @@ module.exports = {
     path: "/sitemap.xml",
     hostname: "https://currency.ovh",
     gzip: true,
-    generate: true,
-    routes() {
-      return ["/"]
-    }
+    generate: true
   }
 }
