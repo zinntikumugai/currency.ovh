@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="center-block">
         <h1 class="title">Services</h1>
-        <p>一つの通貨に縛られないサービスっぽい何かをしてるよ！</p>
+        <p>一つの通貨に縛られないサービスを提供します</p>
       </div>
       <div class="links row">
         <div class="col-6 col-md-4 col-lg-4" v-for="(item, index) in services" :key="index">
