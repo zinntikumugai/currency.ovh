@@ -18,11 +18,11 @@
       </div>
       <hr />
       <a
-        href="https://twitter.com/uesitananame55"
+        :href="`https://twitter.com/${sns.twitter}`"
         target="_blank"
         class="button--grey text-decoration-none"
       >
-        <font-awesome-icon :icon="['fab', 'twitter']" class="c-twitter" />uesitananame55
+        <font-awesome-icon :icon="['fab', 'twitter']" class="c-twitter" /> {{sns.twitter}}
       </a>
       <div>© currency.ovh</div>
     </div>
@@ -34,6 +34,9 @@ export default {
   components: {},
   data() {
     return {
+      sns: {
+        twitter: "CurrencyOvh"
+      },
       services: [
         {
           name: "Pools List",
