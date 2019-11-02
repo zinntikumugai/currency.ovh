@@ -13,7 +13,8 @@
               <img :src="item.imgUrl" class="img-fluid w-50" />
               <hr />
               <h2 class="display-5">{{item.name}}</h2>
-              <p class="lead" v-html="item.sdesc"></p>
+              <p class="badge badge-secondary" v-html="item.sdesc"></p>
+              <p>{{ item.desc }}</p>
             </b-link>
           </div>
         </div>
