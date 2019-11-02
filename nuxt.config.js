@@ -1,5 +1,12 @@
 const pkg = require('./package')
-
+let domain = "currency.ovh"
+const DATAENV = {
+  baseurl: process.env.NODE_ENV !== "development" ? `https://${domain}/` : "http://localhost:5000/",
+  baseName: 'Currency.ovh' || process.env.npm_package_name,
+  baseDesc: '' || process.env.npm_package_description,
+  baseOgp: 'lib/img/ogp' || process.env.BASE_OGP,
+  baseDir: '/' || process.env.BASE_DIR
+}
 
 module.exports = {
   mode: 'spa',
@@ -8,11 +15,19 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: DATAENV.baseName,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: pkg.description },
+      { hid: 'og:site_name', property: 'og:site_name', content: DATAENV.baseName },
+      { hid: 'og:type', property: 'og:type', content: 'article' },
+      { hid: 'og:url', property: 'og:url', content: DATAENV.baseurl },
+      { hid: 'og:title', property: 'og:title', content: DATAENV.baseName },
+      { hid: 'og:description', property: 'og:description', content: DATAENV.baseDesc },
+      { hid: 'og:image', property: 'og:image', content: `${DATAENV.baseurl}icon.png` },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: '@CurrencyOvh' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
