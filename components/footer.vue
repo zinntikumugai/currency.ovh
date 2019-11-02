@@ -15,8 +15,17 @@
               target="_blank"
               class="text-decoration-none"
             >
-              <font-awesome-icon :icon="['fab', 'twitter']" class="c-twitter" />
+              <font-awesome-icon :icon="['fab', 'twitter']"/>
               @{{sns.twitter}}
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              target="_blank"
+              class="text-decoration-none"
+              href="https://github.com/zinntikumugai/currency.ovh"
+            >
+              <font-awesome-icon :icon="['fab', 'github']"/> Source
             </a>
           </li>
         </ul>
@@ -64,9 +73,5 @@ footer .menu li a {
 
 footer .menu li a:hover {
   color: #7dabdb;
-}
-
-.c-twitter {
-  color: #00acee;
 }
 </style>
