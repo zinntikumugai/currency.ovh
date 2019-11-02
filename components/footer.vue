@@ -32,7 +32,7 @@
       </div>
 
       <div class="copyright">
-        <p class="text-center">© currency.ovh</p>
+        <p class="text-center">© Currency.ovh</p>
       </div>
     </footer>
   </div>
