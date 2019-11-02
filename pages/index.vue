@@ -8,9 +8,9 @@
       <h2 class="title">Services</h2>
       <div class="row">
         <div v-for="(item, idxi) in services" :key="idxi" class="col-6 col-lg-4 text-center">
-          <div class="bg-light m-2 p-2">
+          <div class="bg-light my-2 p-2">
             <b-link :href="item.url" class="text-decoration-none text-reset">
-              <img :src="item.imgUrl" class="resizeimage img-fluid w-50" />
+              <img :src="item.imgUrl" class="img-fluid w-50" />
               <hr />
               <h2 class="display-5">{{item.name}}</h2>
               <p class="lead" v-html="item.sdesc"></p>
