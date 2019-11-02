@@ -1,6 +1,6 @@
 <template>
   <div>
-    <footer>
+    <footer _class="fixed-bottom">
       <div class="text-center">
         <ul class="menu list-inline">
           <li class="list-inline-item">
@@ -8,6 +8,16 @@
           </li>
           <li class="list-inline-item">
             <a href="/policy">プライバシポリシー</a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              :href="`https://twitter.com/${sns.twitter}`"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              <font-awesome-icon :icon="['fab', 'twitter']" class="c-twitter" />
+              {{sns.twitter}}
+            </a>
           </li>
         </ul>
       </div>
@@ -18,6 +28,18 @@
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      sns: {
+        twitter: "CurrencyOvh"
+      }
+    };
+  }
+};
+</script>
 
 <style>
 .copyright {
@@ -42,5 +64,9 @@ footer .menu li a {
 
 footer .menu li a:hover {
   color: #7dabdb;
+}
+
+.c-twitter {
+  color: #00acee;
 }
 </style>

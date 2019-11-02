@@ -1,62 +1,83 @@
 <template>
-  <section class="container">
-    <div class="container-fluid">
-      <div class="center-block">
-        <h1>currency.ovh</h1>
-        <p>一つの通貨に縛られないサービスを提供します</p>
-      </div>
-      <div class="center-block">
-        <h2 class="title">Services</h2>
-      </div>
-      <div class="links row">
-        <div class="col-6 col-md-4 col-lg-4" v-for="(item, index) in services" :key="index">
-          <a :href="item.url" target="_blank" class="button--green row text-decoration-none">
-            <img :src="item.imgUrl" class="col-12 resizeimage img-fluid" />
-            <p class="col-12 text-justify text-center">{{item.name}}</p>
-          </a>
+  <div class="container">
+    <div class="center-block">
+      <h1>Currency.ovh</h1>
+      <p>一つの通貨に縛られないサービスを提供します</p>
+    </div>
+    <div class>
+      <h2 class="title">Services</h2>
+      <div class="row">
+        <div v-for="(item, idxi) in services" :key="idxi" class="col-6 col-lg-4 text-center">
+          <div class="bg-light m-2 p-2">
+            <b-link :href="item.url" class="text-decoration-none text-reset">
+              <img :src="item.imgUrl" class="resizeimage img-fluid w-50" />
+              <hr />
+              <h2 class="display-5">{{item.name}}</h2>
+              <p class="lead" v-html="item.sdesc"></p>
+            </b-link>
+          </div>
         </div>
       </div>
-      <hr />
-      <a
-        :href="`https://twitter.com/${sns.twitter}`"
-        target="_blank"
-        class="button--grey text-decoration-none"
-      >
-        <font-awesome-icon :icon="['fab', 'twitter']" class="c-twitter" /> {{sns.twitter}}
-      </a>
-      <div>© currency.ovh</div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
 export default {
   components: {},
+  computed: {
+    conv: function() {
+      let dist = [[]];
+      this.services.forEach((el, idx) => {
+        let tail = dist.length - 1;
+
+        dist[tail].push(el);
+
+        if (
+          this.services.length > idx &&
+          dist[tail].length > this.settings.slicePar - 1
+        ) {
+          dist.push([]);
+        }
+      });
+      dist.pop();
+      return dist;
+    }
+  },
   data() {
     return {
-      sns: {
-        twitter: "CurrencyOvh"
+      settings: {
+        slicePar: 2
       },
       services: [
         {
           name: "Pools List",
           imgUrl: "/icons/list.svg",
-          url: "https://pools.currency.ovh/"
+          url: "https://pools.currency.ovh/",
+          sdesc: "マイニングプール 一覧",
+          desc: "現在稼働中のマイニングプールの利用率が見れます。"
         },
         {
           name: "Explorers List",
           imgUrl: "/icons/list.svg",
-          url: "https://explorers.currency.ovh/"
+          url: "https://explorers.currency.ovh/",
+          sdesc: "エクスプローラー 一覧",
+          desc: "現在稼働中のエクスプローラーの状態が見れます。"
         },
         {
-          name: "BlockBook",
+          name: "Block Book",
           imgUrl: "/icons/trzer.svg",
-          url: "https://blockbook.ovh/"
+          url: "https://blockbook.ovh/",
+          sdesc: "ブロックチェーン<br>エクスプローラー",
+          desc:
+            "ハードウエアウォレットに対応したブロックチェーンエクスプローラーです。"
         },
         {
           name: "人のプール",
           imgUrl: "/icons/pick.svg",
-          url: "https://mining.zinntikumugai.xyz/"
+          url: "https://mining.zinntikumugai.xyz/",
+          sdesc: "マイニング プール",
+          desc: "複数の通貨に対応したマイニングプールです。"
         }
       ]
     };
@@ -67,7 +88,6 @@ export default {
 <style>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -79,37 +99,6 @@ export default {
   font-weight: 300;
   color: #35495e;
   letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-.button--green {
-  display: flex;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin: 10px 5px 10px 5px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.c-twitter {
-  color: #00acee;
 }
 
 .resizeimage {
