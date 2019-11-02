@@ -16,7 +16,7 @@
               class="text-decoration-none"
             >
               <font-awesome-icon :icon="['fab', 'twitter']" class="c-twitter" />
-              {{sns.twitter}}
+              @{{sns.twitter}}
             </a>
           </li>
         </ul>
