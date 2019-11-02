@@ -26,30 +26,9 @@
 <script>
 export default {
   components: {},
-  computed: {
-    conv: function() {
-      let dist = [[]];
-      this.services.forEach((el, idx) => {
-        let tail = dist.length - 1;
-
-        dist[tail].push(el);
-
-        if (
-          this.services.length > idx &&
-          dist[tail].length > this.settings.slicePar - 1
-        ) {
-          dist.push([]);
-        }
-      });
-      dist.pop();
-      return dist;
-    }
-  },
+  computed: {},
   data() {
     return {
-      settings: {
-        slicePar: 2
-      },
       services: [
         {
           name: "Pools List",
