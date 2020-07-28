@@ -102,5 +102,6 @@ module.exports = {
     hostname: "https://currency.ovh",
     gzip: true,
     generate: true
-  }
+  },
+  telemetry: false
 }
